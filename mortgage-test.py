@@ -10,7 +10,7 @@ st.markdown(
     <style>
     /* Change the width of the sidebar */
     .css-1d391kg {
-        width: 350px;  /* Adjust this value to increase/decrease width */
+        width: 500px;  /* Adjust this value to increase/decrease width */
     }
     </style>
     """, 
