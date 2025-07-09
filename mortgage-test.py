@@ -1,3 +1,4 @@
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -10,13 +11,19 @@ st.set_page_config(page_title="Mortgage Scenario Dashboard", layout="wide")
 st.sidebar.title("🏠 Mortgage Parameters")
 st.sidebar.markdown("Fields marked with * are required.")
 
+
 def float_input(label, key, placeholder="", required=False):
     if required:
+        # Use Streamlit's native markdown formatting
         label += " *"
+    else:
+        label += " (Optional)"
+    
     val = st.sidebar.text_input(label, key=key, placeholder=placeholder)
+    
     try:
-        return float(val)
-    except:
+        return float(val) if val else None
+    except ValueError:
         return None
 
 
@@ -36,8 +43,8 @@ max_dti = float_input("Max DTI %", "dti", "e.g. 36", required=True)
 
 
 # Optional inputs (no *)
-min_down_pct = st.sidebar.number_input("Min Down Payment % (Optional)", min_value=0.0, value=3.0, format="%.2f")
-max_down_pct = float_input("Max Down Payment %", "max_dp", "e.g. 20")
+min_down_pct = st.sidebar.number_input("Min Down Payment % (Optional)", min_value=0.0, max_value=100.0, value=3.0, format="%.2f")
+max_down_pct = st.sidebar.number_input("Max Down Payment % (Optional)", min_value=0.0, max_value=100.0, format="%.2f")
 max_monthly_expense = float_input("Max Monthly Expense $", "max_exp", "e.g. 2200")
 
 calculate = st.sidebar.button("🔄 Calculate Scenarios")
