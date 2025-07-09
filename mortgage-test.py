@@ -555,6 +555,14 @@ st.markdown("---")
 st.markdown("""
 <div style="text-align: center; font-size: 14px;">
     <p>✨ Crafted with care by <strong>Zeel Vachhani</strong> ✨</p>
+    
+    <p>
+        <a href="https://www.linkedin.com/in/zeelvachhani" target="_blank" style="text-decoration: none;">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" height="24" style="vertical-align: middle;"/>
+            <span style="margin-left: 8px; vertical-align: middle;">Connect on LinkedIn</span>
+        </a>
+    </p>
+    
     <p>© 2025 Zeel Vachhani. All rights reserved.</p>
     <p><em>This tool is for informational purposes only and should not be considered financial advice.</em></p>
 </div>
