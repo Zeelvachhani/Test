@@ -5,6 +5,18 @@ import numpy as np
 import matplotlib.pyplot as plt
 from st_aggrid import AgGrid, GridOptionsBuilder
 
+st.markdown(
+    """
+    <style>
+    /* Change the width of the sidebar */
+    .css-1d391kg {
+        width: 350px;  /* Adjust this value to increase/decrease width */
+    }
+    </style>
+    """, 
+    unsafe_allow_html=True
+)
+
 st.set_page_config(page_title="Mortgage Scenario Dashboard", layout="wide")
 
 # --- Sidebar inputs ---
