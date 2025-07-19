@@ -353,7 +353,7 @@ if calculate and all(field is not None and field > 0 for field in required_field
             - The **DTI ratio** is a key factor in mortgage qualification.
             - **Formula:**  
 
-            DTI = (Total Monthly Housing Costs + Monthly Liabilities) / Monthly Gross Income
+             - **DTI = (Total Monthly Housing Costs + Monthly Liabilities) / Monthly Gross Income**
 
             - A lower DTI indicates a more favorable financial position.
             - Many lenders prefer a DTI of **36% or less**.
