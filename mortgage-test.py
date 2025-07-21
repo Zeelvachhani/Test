@@ -448,7 +448,7 @@ if calculate and all(field is not None and field > 0 for field in required_field
             df_amortization.index = range(1, len(df_amortization) + 1)  # Fix: Starts from 1
         
     else:
-        st.warning("No valid scenarios found based on your input. Try adjusting your parameters, especially the 'Max Discount Points' or 'Max Down Payment %' if they are restricting too much.")
+        st.warning("No valid scenarios found based on your input.")
 
 elif calculate:
     st.error("Please fill in all required fields: Home Price, Interest Rate, Annual Income, Max DTI, Cash Available.")
