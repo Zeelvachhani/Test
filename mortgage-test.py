@@ -45,8 +45,8 @@ hoa = float_input("HOA $", "hoa", "e.g. 250", required=True)
 property_tax_rate = float_input("Property Tax %", "tax", "e.g. 1.2", required=True)
 insurance_rate = float_input("Insurance %", "insurance", "e.g. 0.5", required=True)
 pmi_rate = float_input("PMI %", "pmi", "e.g. 0.5", required=True)
-interest_rate_base = float_input("Interest Rate %", "rate", "e.g. 5", required=True)
-loan_term = st.sidebar.number_input("Loan Term (Years) *", min_value=1, max_value=40, value=30)
+interest_rate_base = float_input("Interest Rate %", "rate", "e.g. 6", required=True)
+loan_term = st.sidebar.number_input("Loan Term (Years) *", min_value=1, max_value=30, value=30)
 
 cash_available = float_input("Cash Available $", "cash", "e.g. 80000", required=True)
 monthly_liability = float_input("Monthly Liability $", "liability", "e.g. 500", required=True)
@@ -55,7 +55,7 @@ max_dti = float_input("Max DTI %", "dti", "e.g. 36", required=True)
 
 
 # Optional inputs (no *)
-min_down_pct = st.sidebar.number_input("Min Down Payment % (Optional)", min_value=0.0, max_value=100.0, value=3.0, format="%.2f")
+min_down_pct = st.sidebar.number_input("Min Down Payment % (Optional)", min_value=0.0, max_value=100.0, value=5.0, format="%.2f")
 max_down_pct = float_input("Max Down Payment %", "max_dp", "e.g. 20")
 max_monthly_expense = float_input("Max Monthly Expense $", "max_exp", "e.g. 2200")
 
@@ -64,7 +64,7 @@ max_discount_points = st.sidebar.number_input(
     "Max Discount Points (Optional)",
     min_value=0, 
     max_value=20, # Assuming 20 is a reasonable upper limit for points
-    value=20, # Default to 20 to include all points if not specified
+    value=7, # Default to 20 to include all points if not specified
     help="Maximum number of discount points you are willing to purchase (each point reduces interest rate by 0.25%)."
 )
 
