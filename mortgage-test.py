@@ -372,7 +372,7 @@ if calculate and all(field is not None and field > 0 for field in required_field
             int_cols = [col for col in numeric_cols if 'Interest' in col or 'Payment' in col or 'Balance' in col or col in ["Home Price $", "Down $", "Loan Amount $", "Discount Points", "Closing Cost $", "Total Cash Used $", "Total PMI Paid $"]]
             fmt = {}
             for col in df_loan.columns:
-                if col in ["PMI $", "Monthly P&I $", "Total Monthly $"]:
+                if col in ["PMI $", "Monthly P&I $", "Total Monthly $", "Total PMI Paid $"]:
                     fmt[col] = "${:,.2f}"
                 elif col in ["Down %", "Interest Rate %", "DTI %"]:
                     fmt[col] = "{:,.2f}%"
